@@ -1,0 +1,71 @@
+
+/* EVENT CARD CSS (With help from chat-gpt..)*/
+.events{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px;
+}
+.event-card{
+    background-color: var(--grey-10);
+    font-family: var(--font);
+    overflow: hidden;
+    width: 250px;
+    height: 290px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.event-card-header{
+    background-color: var(--cool-grey-20);
+    position: relative;
+    width: 250px;
+    height: 164px;
+}
+.event-card-image{
+    position: relative;
+    width: 250px;
+    height: 164px;
+}
+.event-card-category{
+    background-color: var(--cool-grey-10);
+    color: var(--secondary-100);
+    font-size: 11px;
+    font-weight: var(--medium-500);
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 6px 10px;
+    border-radius: 9px;
+}
+.event-card-content{
+    padding: 16px;
+}
+.event-card-title{
+    color: var(--grey-100);
+    font-weight: var(--semibold-600);
+    font-size: 14px;
+    margin: 0;
+}
+.event-card-location{
+    color: var(--grey-80);
+    font-size: 12px;
+    margin: 4px 0 12px;
+}
+.event-card-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.event-card-date{
+    display: flex;
+    align-items: center;
+    color: var(--grey-100);
+    font: 12px;
+    gap: 4px;
+}
+.event-card-price{
+    color: var(--primary-100);
+    font-weight: var(--bold-700);
+    font-size: 18px;
+}
+
