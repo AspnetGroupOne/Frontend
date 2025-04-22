@@ -5,6 +5,7 @@ const EventCard = ({event}) => {
     const [imageDescription, setImageDescription] = useState("...");
 
     //Will set the card image and description for now depending on the category that the event has.
+    //Can turn this into a fetch or something to get images from a database online if someone wants to do that.
     function Setting_EventCardImage() {
       switch (event.category){
         case "Sport":

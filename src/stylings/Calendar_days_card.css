@@ -1,0 +1,81 @@
+
+/* CALENDAR DAY CARD CSS (Partially from chatgpt) */
+
+.calendar-day-card-content {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    grid-template-areas:
+      "aside middle";
+    font-family: var(--font);
+    background-color: var(--grey-20);
+    padding: 12px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    gap: 4px;
+    max-width: 310px;
+    margin-bottom: 12px;
+}
+.calendar-day-color-card {
+    grid-area: aside;
+    text-align: center;
+    color: var(--grey-10);
+    width: 52px;
+    height: 68px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+.color-card-date {
+    font-size: 18px;
+    margin: 0;
+    margin-top: 13px;
+}
+.color-card-day {
+    font-size: 10px;
+    margin-top: 11px;
+}
+.calendar-day-card-middle {
+    grid-area: middle;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 8px;
+}
+.calendar-day-card-title {
+    color: var(--grey-100);
+    font-weight: var(--regular-400);
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+}
+.calendar-day-card-description {
+    color: var(--grey-80);
+    font-weight: var(--regular-400);
+    font-size: 11px;
+    margin: 0 0 8px 0;
+}
+.calendar-day-card-footer {
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: var(--regular-400);
+    color: var(--grey-90);
+    gap: 16px;
+    font-size: 10px;
+    margin-top: 6px;
+}
+.calendar-day-card-theme {
+    margin: 0;
+}
+.calendar-day-card-time {
+    margin: 0;
+}
+.calendar-day-card-time i {
+    margin-right: 4px;
+}
+
+/* Two classes to use for changing the color in the date part of the card. */
+.change-color-pink{
+    background-color: var(--primary-100);
+}
+.change-color-blue{
+    background-color: var(--secondary-100);
+}
