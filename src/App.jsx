@@ -1,6 +1,7 @@
 import { Suspense } from 'react'
 import './App.css'
 import './stylings/Event_card.css'
+import './stylings/Calendar_days_card.css'
 
 import RouteRenderer from './routing/RouteRenderer';
 
