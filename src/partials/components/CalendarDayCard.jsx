@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-const CalendarDayCard = () => {
+const CalendarDayCard = ({calendarDays}) => {
     //Carrier for the class which gets switched below.
     const [colorSmallCard, setColorSmallCard] = useState("change-color-blue");
 
