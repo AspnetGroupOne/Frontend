@@ -21,18 +21,18 @@ const CalendarDayCard = ({calendarDays}) => {
 
     return (
         <div className='calendar-day-card-content'>
-            <div className={`calendar-day-color-card ${colorSmallCard}`}>
+            <aside className={`calendar-day-color-card ${colorSmallCard}`}>
                 <p className='color-card-date'>{calendarDays.date}</p>
                 <p className='color-card-day'>{calendarDays.day}</p>
-            </div>
-            <div className='calendar-day-card-middle'>
+            </aside>
+            <section className='calendar-day-card-middle'>
                 <p className='calendar-day-card-title'>{calendarDays.title}</p>
                 <p className='calendar-day-card-description'>{calendarDays.description}</p>
-                <div className='calendar-day-card-footer'>
+                <footer className='calendar-day-card-footer'>
                     <p className='calendar-day-card-theme'>{calendarDays.theme}</p>
                     <p className='calendar-day-card-time'><i className="fa-thin fa-clock"></i> {calendarDays.startTime} PM - {calendarDays.endTime} PM</p>
-                </div>
-            </div>
+                </footer>
+            </section>
         </div>
     )
 }
