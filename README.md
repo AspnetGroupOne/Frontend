@@ -3,6 +3,8 @@
 
 
 
+
+
 # Components: 
 
 
@@ -28,7 +30,7 @@ Usage:
 <img src="https://github.com/user-attachments/assets/f24bc4f3-6846-4aad-9583-99d2219fb268" height="200">
 
 
-### CalendarDayCard
+### CalendarDayCard:
 
 The color on the calendar days card will change depending on if the day is even or not. 
 
@@ -37,3 +39,7 @@ The color on the calendar days card will change depending on if the day is even 
 Usage: 
 
 <img src="https://github.com/user-attachments/assets/163078b5-bff8-4f73-b15f-ce0a217551a4" height="200">
+
+### Footer:
+
+<img src="https://github.com/user-attachments/assets/f54f7313-d3a0-4e4a-94fe-6605dcfa3e31" width="700">
