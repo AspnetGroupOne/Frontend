@@ -6,7 +6,7 @@ const PortalLayout = () => {
     <div className='portal-layout'>
 
         <Outlet />
-
+      
     </div>
   )
 }
