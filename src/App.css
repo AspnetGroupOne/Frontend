@@ -48,10 +48,10 @@
     --cool-grey-100: #131314;
 
     /* FONT WEIGHTS: */
-    --regular: 400;
-    --medium: 500;
-    --semibold: 600;
-    --bold: 700;
+    --regular-400: 400;
+    --medium-500: 500;
+    --semibold-600: 600;
+    --bold-700: 700;
 
     /* BACKGROUND  */
     --background-color: var(--grey-10);
@@ -62,7 +62,7 @@
   }
 html, body {
     font-family: var(--font);
-    font-weight: var(--regular);
+    font-weight: var(--regular-400);
     font-style: normal;
     font-size: 16px;
     color: var(--grey-100);
@@ -72,7 +72,7 @@ html, body {
 /* HEADERS */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-weight: var(--semibold);
+    font-weight: var(--semibold-600);
     color: var(--grey-100);
     margin: 0;
     padding: 0;
@@ -87,8 +87,7 @@ h1, h2, h3, h4, h5, h6,
 .h6, h6 { font-size: 20px; }
 
 /* FONT-WEIGHT CLASSES */
-.regular { font-weight: var(--normal);}
-.medium { font-weight: var(--medium); }
-.semibold { font-weight: var(--semibold); }
-.bold { font-weight: var(--bold); }
-
+.regular { font-weight: var(--regular-400);}
+.medium { font-weight: var(--medium-500); }
+.semibold { font-weight: var(--semibold-600); }
+.bold { font-weight: var(--bold-700); }
