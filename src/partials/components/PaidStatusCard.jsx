@@ -29,14 +29,14 @@ const PaidStatusCard = ({payStatus}) => {
     return (
         <>
             <div className='paidStatusCard-wrapper'>
-                <div className='paidStatusCard-header'>
+                <header className='paidStatusCard-header'>
                     <p className='paidStatusCard-header-para' >{payStatus.status}</p>
                     <img className='paidStatusCard-header-img' src={paidStatusIcon} alt="Icon of paid, unpaid or overdue status of payment." />
-                </div>
-                <div className='paidStatusCard-footer'>
+                </header>
+                <footer className='paidStatusCard-footer'>
                     <h6 className='paidStatusCard-footer-amount'> {payStatus.amount}</h6>
                     <p className='paidStatusCard-footer-lastMonth'>Last Month: {payStatus.lastMonth}</p>
-                </div>
+                </footer>
             </div>
         </>
     )

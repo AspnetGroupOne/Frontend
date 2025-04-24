@@ -35,18 +35,18 @@ const EventCard = ({event}) => {
     return (
         <>
             <div className='event-card'>
-                <div className='event-card-header'>
+                <header className='event-card-header'>
                     <img className='event-card-image' src={imageUrl} alt={imageDescription} />
                     <span className='event-card-category'>{event.category} </span>
-                </div>
-                <div className='event-card-content'>
+                </header>
+                <section className='event-card-content'>
                     <p className='event-card-title'>{event.title}</p>
                     <p className='event-card-location'>{event.location}</p>
-                    <div className='event-card-footer'>
-                        <span className='event-card-date'><i className="fa-solid fa-calendar-days"></i>{event.date} </span>
-                        <span className='event-card-price'><i className="fa-solid fa-dollar-sign"></i>{event.price} </span>
-                    </div>
-                </div>
+                    <footer className='event-card-footer'>
+                        <p className='event-card-date'><i className="fa-solid fa-calendar-days"></i>{event.date} </p>
+                        <p className='event-card-price'><i className="fa-solid fa-dollar-sign"></i>{event.price} </p>
+                    </footer>
+                </section>
             </div>
         </>
     )
