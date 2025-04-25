@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
+import './stylings/Paid_status_card.css'
 
 const PaidStatusCard = ({payStatus}) => {
     const [paidStatusIcon, setPaidStatusIcon] = useState("");
 
-    //Will pick which image depending on status.
+    //Will pick which icon depending on status.
     function CheckPaidStatus() {
         switch(payStatus.status){
             case "Paid":

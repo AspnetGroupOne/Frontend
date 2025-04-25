@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
+import './stylings/Event_card.css'
 
 const EventCard = ({event}) => {
     const [imageUrl, setImageUrl] = useState("...");
     const [imageDescription, setImageDescription] = useState("...");
 
     //Will set the card image and description for now depending on the category that the event has.
-    //Can turn this into a fetch or something to get images from a database online if someone wants to do that.
+    //Can turn this into a fetch or something to get images from a database online if someone wants to create an api and database for that.
     function Setting_EventCardImage() {
       switch (event.category){
         case "Sport":
