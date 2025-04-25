@@ -3,6 +3,8 @@ import './App.css'
 import './stylings/Event_card.css'
 import './stylings/Calendar_days_card.css'
 import './stylings/Paid_status_card.css'
+import './stylings/Footer.css'
+
 
 import RouteRenderer from './routing/RouteRenderer';
 
