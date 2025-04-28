@@ -1,0 +1,10 @@
+.portal-layout {
+    display: flex;
+    height: 100vh;
+  }
+
+  .portal-main {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+  }
