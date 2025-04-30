@@ -4,8 +4,8 @@ import { createContext, useContext, useState } from "react";
 const AuthContext = createContext()
 
 export const AuthProvider = ({children}) => {
-    const [ isAuthenticated, setIsAuthenticated ] = useState(false)
-    const [ isAdmin, setIsAdmin ] = useState(false)
+    const [ isAuthenticated, setIsAuthenticated ] = useState(true)
+    const [ isAdmin, setIsAdmin ] = useState(true)
 
     //user kanske inte används här sa Hasse;
     const [ user, setUser ] = useState(null)

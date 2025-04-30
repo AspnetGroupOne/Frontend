@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './stylings/Footer.css'
+import '../../stylings/Footer.css'
 
 
 

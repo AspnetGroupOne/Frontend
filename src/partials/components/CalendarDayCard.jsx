@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './stylings/Calendar_days_card.css'
+import '../../stylings/Calendar_days_card.css'
 
 
 const CalendarDayCard = ({calendarDays}) => {
