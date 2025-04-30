@@ -7,8 +7,17 @@
     border-radius: 16px;
     width: 1181px;
     height: 52px;
-    padding-right: 26px;
-    padding-left: 26px;
+    padding-right: 24px;
+    padding-left: 24px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+
+    position: fixed;
+    bottom: 0;
+    left: 250px;
+    right: 0;
+    margin: auto;
+    margin-bottom: 5px;
 }
 .page-footer-text{
     display: flex;
