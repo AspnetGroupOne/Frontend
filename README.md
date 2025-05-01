@@ -6,17 +6,17 @@ We are a group of students at Nackademin in Stockholm, Sweden, who have been tas
 
 ### Our Team;
 
-Benjamin Igbinoke            https://github.com/lobba1
+Benjamin           https://github.com/lobba1
 
-Birger Sandell               https://github.com/Bir-San
+Birger              https://github.com/Bir-San
 
-Fredrik Hammargran           https://github.com/5iqFreddie
+Fredrik           https://github.com/5iqFreddie
 
-Hampus Grünewald             https://github.com/Hampus335
+Hampus            https://github.com/Hampus335
 
-Shahad Al-kazzaz             https://github.com/ShahadAlkazzaz
+Shahad             https://github.com/ShahadAlkazzaz
 
-Simon Rollén                 https://github.com/SimonR-prog
+Simon                https://github.com/SimonR-prog
 
 
 
