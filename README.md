@@ -1,30 +1,29 @@
 # React frontend for group-assignment 
 
+## Assignment: 
+
+We are a group of students at Nackademin in Stockholm, Sweden, who have been tasked with starting an eventbooking-site with the use of microservices.
+
+### Our Team;
+
+Benjamin Igbinoke            https://github.com/lobba1
+
+Birger Sandell               https://github.com/Bir-San
+
+Fredrik Hammargran           https://github.com/5iqFreddie
+
+Hampus Grünewald             https://github.com/Hampus335
+
+Shahad Al-kazzaz             https://github.com/ShahadAlkazzaz
+
+Simon Rollén                 https://github.com/SimonR-prog
 
 
 
-```
-/Folder Structure:
-│
-├── public           
-├──── images            
-├── src             
-├──── contexts
-├──── partials          
-├────── components            
-├────── layouts            
-├────── pages       
-├──────── admin           
-├──────── auth
-├──────── user
-├──── routing
-└──── stylings        
-
-
-```
 
 # Components: 
 
+Random components here for the purpose of documentation.
 
 ### EventCard:
 
