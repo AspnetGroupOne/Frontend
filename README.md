@@ -3,7 +3,25 @@
 
 
 
+```
+/Folder Structure:
+│
+├── public           
+├──── images            
+├── src             
+├──── contexts
+├──── partials          
+├────── components            
+├────── layouts            
+├────── pages       
+├──────── admin           
+├──────── auth
+├──────── user
+├──── routing
+└──── stylings        
 
+
+```
 
 # Components: 
 
