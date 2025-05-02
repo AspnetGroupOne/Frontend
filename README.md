@@ -30,28 +30,28 @@ Simon                https://github.com/SimonR-prog
 
 / ADMIN:
 │
-├── Bookings.jsx                   # 
-├── Dashboard.jsx                  # 
-├── EventDetails.jsx               # Page where admin can add even more information to av event.
-├──                                # 
-├──                                #  
-├──                                # 
-└──                                # 
+├── Bookings.jsx             # 
+├── Dashboard.jsx            # 
+├── EventDetails.jsx         # Page where admin can add even more information to av event.
+├──                          # 
+├──                          #  
+├──                          # 
+└──                          # 
 
 / AUTH:
-├── SignIn.jsx                     # Page for signing in. 
-├── SignUp.jsx                     # Page for signing up.
-└── Unauthorized.jsx               # Page for unauthorized access.
+├── SignIn.jsx               # Page for signing in. 
+├── SignUp.jsx               # Page for signing up.
+└── Unauthorized.jsx         # Page for unauthorized access.
 
 / USER:
 │
-├── Bookings.jsx                   # 
-├── Dashboard.jsx                  # 
-├── EVoucher.jsx                   # Page where user can see their ticket and additional information about an event that they have booked.
-├──                                # 
-├──                                #  
-├──                                # 
-└──                                # 
+├── Bookings.jsx             # 
+├── Dashboard.jsx            # 
+├── EVoucher.jsx             # Page where user can see their ticket and additional information about an event that they have booked.
+├──                          # 
+├──                          #  
+├──                          # 
+└──                          # 
 
 
 ```
