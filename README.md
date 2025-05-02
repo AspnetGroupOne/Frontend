@@ -24,7 +24,7 @@ Simon                https://github.com/SimonR-prog
 
 # Pages:
 
-```
+```jsx
 
 / Ventixe - Event-page
 
