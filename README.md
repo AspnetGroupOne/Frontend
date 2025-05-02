@@ -1,10 +1,10 @@
-# React frontend for group-assignment 
+# React frontend for group-assignment.
 
 ## Assignment: 
 
 We are a group of students at Nackademin in Stockholm, Sweden, who have been tasked with starting an eventbooking-site with the use of microservices.
 
-### Our Team;
+### Our Team:
 
 Benjamin           https://github.com/lobba1
 
@@ -18,6 +18,43 @@ Shahad             https://github.com/ShahadAlkazzaz
 
 Simon                https://github.com/SimonR-prog
 
+
+
+
+
+# Pages:
+
+```
+
+/ Ventixe - Event-page
+
+/ ADMIN:
+│
+├── Bookings.jsx                   # 
+├── Dashboard.jsx                  # 
+├── EventDetails.jsx               # Page where admin can add even more information to av event.
+├──                                # 
+├──                                #  
+├──                                # 
+└──                                # 
+
+/ AUTH:
+├── SignIn.jsx                     # Page for signing in. 
+├── SignUp.jsx                     # Page for signing up.
+└── Unauthorized.jsx               # Page for unauthorized access.
+
+/ USER:
+│
+├── Bookings.jsx                   # 
+├── Dashboard.jsx                  # 
+├── EVoucher.jsx                   # Page where user can see their ticket and additional information about an event that they have booked.
+├──                                # 
+├──                                #  
+├──                                # 
+└──                                # 
+
+
+```
 
 
 
