@@ -155,3 +155,9 @@ export default CalendarDaysCard
 ### Footer:
 
 <img src="https://github.com/user-attachments/assets/f54f7313-d3a0-4e4a-94fe-6605dcfa3e31" width="700">
+
+### Schedule:
+
+The AM/PM changes depending on if the first two digits is higher or lower than 12.
+
+<img src="https://github.com/user-attachments/assets/028d3aff-bd27-4669-8a84-dd94fb8b15f9" height="200">
