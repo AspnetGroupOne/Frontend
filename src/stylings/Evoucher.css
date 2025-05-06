@@ -1,0 +1,54 @@
+.evoucher-main{ 
+    background-color: blue;
+    display: grid;
+    width: 1181px;
+    height: 1375px;
+    padding: 24px;
+    grid-template-areas: 
+        "ticket ticket"
+        "left right";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+}
+.evoucher-ticket{
+    grid-area: ticket;
+    background-color: red;
+    width: 1133px;
+    height: 256px;
+    margin-bottom: 24px;
+}
+.evoucher-left{
+    grid-area: left;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    margin-right: 12px;
+}
+.evoucher-right{
+    grid-area: right;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    margin-left: 12px;
+}
+
+.evoucher-schedule{
+    background-color: rgb(80, 207, 214);
+    width: 554px;
+    height: 230px;
+    margin-bottom: 12px;
+}
+.evoucher-terms{
+    background-color: rgb(18, 173, 88);
+    width: 554px;
+    height: 805px;
+}
+.evoucher-venue-map{
+    background-color: rgb(214, 219, 148);
+    width: 554px;
+    height: 593px;
+    margin-bottom: 12px;
+}
+.evoucher-rules{
+    background-color: rgb(204, 91, 10);
+    width: 554px;
+    height: 442px;
+}

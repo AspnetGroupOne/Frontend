@@ -1,0 +1,39 @@
+/* EVENTSCHEDULE COMPONENT */
+.schedule-component-wrapper{
+    padding: 16px;
+    width: 554px;
+    height: 230px;
+    background-color: var(--grey-10);
+    border-radius: 16px;
+}
+.schedule-component-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.schedule-component-line{
+    background-color: var(--grey-30);
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    padding: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 200px;
+}
+.schedule-component-time{
+    color: var(--secondary-100);
+    font-size: 12px;
+    font-weight: var(--semibold-600);
+    padding-left: 14px;
+}
+.schedule-component-text{
+    font-size: 14px;
+    font-weight: var(--regular-400);
+    color: var(--grey-90);
+    padding-left: 25px;
+}
