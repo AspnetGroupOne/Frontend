@@ -1,15 +1,13 @@
 import React from 'react'
 import '../../../stylings/Evoucher.css'
 import EventSchedule from '../../components/EventSchedule'
+import EventRules from './../../components/EventRules';
 
 
 
 
 const EVoucher = ({eventId}) => {
     
-
-
-
         
     return (
         <>
@@ -33,7 +31,7 @@ const EVoucher = ({eventId}) => {
 
                     </div>
                     <div className='evoucher-rules'>
-
+                        <EventRules id={eventId} />
                     </div>
                 </div>
 

@@ -22,12 +22,10 @@ const ModalEventSchedule = ({ eventName, id, closeModal }) => {
             const data = await res.json();
             if (!data.success || !data.content){
                 setIsEdit(false)
-                console.log("No data found.")
             }
             else{
                 setData(data.content)
                 setIsEdit(true)
-                console.log("Data found.")
 
                 setGateOpenStart(data.content.gateOpenStart)
                 setGateOpenEnd(data.content.gateOpenEnd)
@@ -67,8 +65,6 @@ const ModalEventSchedule = ({ eventName, id, closeModal }) => {
                     body: JSON.stringify(formData)
                 })
                 if (res.ok) {
-                    console.log("Schedule added.");
-                    console.log(res)
                     closeModal();
                 }
                 else{
@@ -95,8 +91,6 @@ const ModalEventSchedule = ({ eventName, id, closeModal }) => {
                     body: JSON.stringify(formData)
                 })
                 if (res.ok) {
-                    console.log("Schedule added.");
-                    console.log(res)
                     closeModal();
                 }
                 else{

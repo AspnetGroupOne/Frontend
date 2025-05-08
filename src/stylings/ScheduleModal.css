@@ -1,7 +1,6 @@
 /* SCHEDULES MODAL*/
 .modal-schedules{
     font-family: var(--font);
-    overflow-y: none;
 }
 .modal-schedule-main{
     padding: 35px;
@@ -10,6 +9,7 @@
     border-radius: 16px;
 }
 .modal-schedule-header{
+    font-family: var(--font);
     display: flex;
     align-items: center;
     gap: 90px;

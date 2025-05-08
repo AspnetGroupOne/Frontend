@@ -1,0 +1,40 @@
+
+/* RULES COMPONENT */
+.rules-component-wrapper{
+    width: 554px;
+    height: 442px;
+    background-color: var(--grey-10);
+    border-radius: 16px;
+    padding: 16px;
+}
+.rules-component-header{
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.rules-component-image-section{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 522px;
+    height: 356px;
+}
+.rules-component-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.rules-component-img-text{
+    font-size: 11px;
+    color: var(--secondary-100);
+    font-weight: var(--regular-400);
+}
+.rules-small-img{
+    width: 42px;
+    height: 42px;
+}
+.rules-big-img{
+    width: 62px;
+    height: 62px;
+}
