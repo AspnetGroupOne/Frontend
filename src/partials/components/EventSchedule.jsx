@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import '../../stylings/ScheduleComp.css'
 
-const EventSchedule = ({id, reloadData }) => {
+const EventSchedule = ({ id, reloadData }) => {
     const [data, setData] = useState([]);
 
     const [gateOpenStart, setGateOpenStart] = useState("");
@@ -18,10 +18,9 @@ const EventSchedule = ({id, reloadData }) => {
             const res = await fetch(`https://eventscheduleservice-dfa6gxfrg2cwe3ca.swedencentral-01.azurewebsites.net/api/Schedules/${id}`);
             const data = await res.json();
             if (!data.success)
-                console.log("No data found.")
+                console.error("No schedule found.")
             else{
                 setData(data.content)
-                console.log("Data found.")
 
                 setGateOpenStart(data.content.gateOpenStart)
                 setGateOpenEnd(data.content.gateOpenEnd)
@@ -33,7 +32,7 @@ const EventSchedule = ({id, reloadData }) => {
             }
         }
         catch (error){
-            console.error("Something went wrong when fetching data.")
+            console.error("Something went wrong when fetching the schedule.")
         }
     }
     
