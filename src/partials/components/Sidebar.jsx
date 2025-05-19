@@ -41,6 +41,11 @@ const Sidebar = () => {
           <NavLink to="/events" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
             <FiTag /> Events
           </NavLink>
+          
+          <NavLink to="/admin/events" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+            <FiTag /> Admin Events
+          </NavLink>
+
           <NavLink to="/financials" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
             <FiDollarSign /> Financials
           </NavLink>
