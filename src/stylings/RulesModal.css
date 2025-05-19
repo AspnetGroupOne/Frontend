@@ -1,0 +1,43 @@
+
+
+/* RULES MODAL */
+.modal-rules-main{
+    padding: 35px;
+    font-family: var(--font);
+    background-color: var(--cool-grey-20);
+    border-radius: 16px;
+}
+.modal-rules-header{
+    font-family: var(--font);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+    margin-bottom: 15px;
+}
+.modal-rules-buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.modal-rules-btn{
+    font-family: var(--font);
+    font-weight: var(--medium-500);
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    gap: 25px;
+    border-radius: 999px;
+    transition: 0.15s ease-in-out;
+    width: 75px;
+    height: 75px;
+    background-color: var(--cool-grey-20);
+}
+.rules-small-img-modal{
+    width: 22px;
+    height: 22px;
+}
+.rules-big-img-modal{
+    width: 42px;
+    height: 42px;
+}
+
