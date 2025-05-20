@@ -50,7 +50,7 @@ export const routes = [
             { path: '/admin/dashboard', element: <AdminDashboard /> },
             { path: '/admin/bookings', element: <AdminBookings /> },
 
-            { path: '/admin/events', element: <AdminEvents /> }
+            { path: '/admin/events', element: <AdminEvents /> },
 
             { path: '/admin/eventDetails', element: <AdminEventDetails />}
         ]
