@@ -4,7 +4,6 @@ import '../../stylings/RulesModal.css'
 const ModalEventRules = ({ id, closeModal }) => {
   const [isEdit, setIsEdit] = useState(false)
   const [imageUrl, setImageUrl] = useState()
-  const [size, setSize] = useState()
 
   //Learned a new way of doing this part from chatgpt.
   const [rules, setRules] = useState({
@@ -29,6 +28,7 @@ const ModalEventRules = ({ id, closeModal }) => {
       if (!data.success || !data.content){
         setIsEdit(false)
         console.log("No data found.")
+        setRules()
       }
       else{
         const { eventId, ...currentRules } = data.content;
@@ -109,7 +109,7 @@ const ModalEventRules = ({ id, closeModal }) => {
         </div>
 
         <form onSubmit={handleSubmit} className='modal-rules-buttons'>
-          {Object.entries(rules).map(([key, value]) => (
+          {Object.entries(rules).map(([key]) => (
             <button type='button' key={key} className="modal-rules-btn"  onClick={() => setRules(prev => ({...prev, [key]: !prev[key] }))}>
               <img className={`modal-rules-image ${rules[key] ? "rules-big-img-modal" : "rules-small-img-modal"}`} src={`/images/rules-icons/${rules[key] ? "true" : "false"}/${key}.svg`} /> 
             </button>
