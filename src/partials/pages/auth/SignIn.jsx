@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom"; // Added useNavigate for redirects
 import "./Auth.css";
 
 const SignIn = () => {
@@ -11,6 +9,7 @@ const SignIn = () => {
   });
 
   const [status, setStatus] = useState("");
+  const navigate = useNavigate(); // Initialize navigate
 
   const handleChange = (e) => {
     setFormData((prev) => ({
@@ -46,9 +45,10 @@ const SignIn = () => {
       const result = await response.json();
 
       if (response.ok) {
-        setStatus("Signup successful!");
+        setStatus("Login successful!");
+        navigate("/dashboard"); // Redirect to /dashboard after successful login
       } else {
-        setStatus(result.message || "Signup failed.");
+        setStatus(result.message || "Login failed.");
       }
     } catch (error) {
       setStatus("Error connecting to server.");
@@ -85,6 +85,8 @@ const SignIn = () => {
         <button type="submit" disabled={!isFormValid}>
           Sign In
         </button>
+
+        <p className="status-message">{status}</p>
 
         <p className="signin-link">Forgotten Password? <Link to="/denied">Reset Password</Link></p>
         <p className="signin-link">Don't have an account yet? <Link to="/signup">Sign Up</Link></p>
