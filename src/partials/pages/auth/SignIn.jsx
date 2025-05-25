@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom"; // Added useNavigate for redirects
+import { Link, useNavigate } from "react-router-dom";
 import "./Auth.css";
 
 const SignIn = () => {
@@ -9,7 +9,7 @@ const SignIn = () => {
   });
 
   const [status, setStatus] = useState("");
-  const navigate = useNavigate(); // Initialize navigate
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData((prev) => ({
@@ -31,7 +31,7 @@ const SignIn = () => {
     setStatus("Submitting...");
 
     try {
-      const response = await fetch("http://localhost:5001/api/auth/signin", {
+      const response = await fetch("https://ventixeauthserviceprovider-e6fshpfqfpemcgdz.swedencentral-01.azurewebsites.net/api/auth/signin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -46,7 +46,7 @@ const SignIn = () => {
 
       if (response.ok) {
         setStatus("Login successful!");
-        navigate("/dashboard"); // Redirect to /dashboard after successful login
+        navigate("/dashboard");
       } else {
         setStatus(result.message || "Login failed.");
       }
