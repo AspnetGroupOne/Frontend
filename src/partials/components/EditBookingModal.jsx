@@ -64,7 +64,7 @@ const EditBookingModal = ({ booking, onClose, onBookingUpdated }) => {
 
         setTimeout(() => {
           setMessage("");
-          onClose(); 
+          onClose();
         }, 4000);
       } else {
         setMessage("❌ Failed to update booking.");
@@ -97,7 +97,6 @@ const EditBookingModal = ({ booking, onClose, onBookingUpdated }) => {
           <input name="voucher" type="text" placeholder="Voucher Code" value={formData.voucher} onChange={handleChange} />
           <input name="date" type="datetime-local" value={formData.date} onChange={handleChange} required />
 
-          {/* ✅ Statusfält – valbart */}
           <select name="status" value={formData.status} onChange={handleChange}>
             <option value="Confirmed">Confirmed</option>
             <option value="Pending">Pending</option>

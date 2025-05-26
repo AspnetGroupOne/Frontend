@@ -290,7 +290,7 @@ const BookingsTable = () => {
 
 {showDeleteModal && (
   <div className="modal-overlay">
-    <div className="modal-content">
+    <div className="delete-modal-content">
       <h3>Are you sure?</h3>
       <p>Do you want to delete this booking?</p>
       <div className="modal-buttons">
