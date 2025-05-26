@@ -1,0 +1,53 @@
+
+/* TERMSMODAL */
+
+.modal-terms{
+    padding: 25px;
+    font-family: var(--font);
+    background-color: var(--cool-grey-20);
+    border-radius: 16px;
+}
+.modal-terms-header{
+    font-family: var(--font);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+    margin-bottom: 15px;
+}
+.modal-terms-header-text{
+    font-family: var(--font);
+}
+.modal-terms-form{
+    display: grid;
+}
+.modal-terms-text{
+    font-family: var(--font);
+}
+.modal-terms-textarea{
+    font-family: var(--font);
+    resize: none;
+}
+
+/* TERMSCOMPoNENT */ 
+.comp-terms-background{
+    margin-top: 12px;
+    padding: 16px;
+    background-color: var(--grey-10);
+    border-radius: 16px;
+}
+.comp-terms-header{
+    margin-bottom: 16px;
+}
+.comp-terms-wrapper{
+    
+}
+.comp-terms-text-header{
+    font-family: var(--font);
+    font-size: 12px;
+    font-weight: var(--semibold-600);
+}
+.comp-terms-text{
+    font-family: var(--font);
+    font-size: 12px;
+}

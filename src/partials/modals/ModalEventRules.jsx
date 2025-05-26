@@ -104,7 +104,7 @@ const ModalEventRules = ({ id, closeModal }) => {
     <>
       <main className='modal-rules-main'>
         <div className='modal-rules-header'>
-          <h6>EventTitle</h6>
+          <h6>Event Title</h6>
           <button className='btn btn-close-pink' onClick={() => closeModal()}>X</button>
         </div>
 
