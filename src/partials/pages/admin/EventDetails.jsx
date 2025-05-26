@@ -4,6 +4,8 @@ import ModalEventSchedule from './../../modals/ModalEventSchedule';
 import ModalEventRules from './../../modals/ModalEventRules';
 import EventSchedule from '../../components/EventSchedule';
 import EventRules from '../../components/EventRules';
+import ModalTerms from '../../modals/ModalTerms';
+import TermsComp from '../../components/TermsComp';
 
 
 const EventDetails = ({eventID}) => {
@@ -61,9 +63,9 @@ const EventDetails = ({eventID}) => {
           
         </div>
         <section className='event-details-top-footer'>
-          <button className='btn-2 btn-pink btn-left' onClick={() => OpenChosen("rules") } >Rules</button>
-          <button className='btn-2 btn-pink btn-mid' onClick={() => OpenChosen("schedules") } >Schedule</button>
-          <button className='btn-2 btn-pink btn-mid'>Terms</button>
+          <button className='btn-2 btn-pink btn-left' onClick={() => OpenChosen("schedules") } >Schedule</button>
+          <button className='btn-2 btn-pink btn-mid' onClick={() => OpenChosen("rules") } >Rules</button>
+          <button className='btn-2 btn-pink btn-mid'onClick={() => OpenChosen("terms") } >Terms</button>
           <button className='btn-2 btn-pink btn-mid'>Venue Map</button>
           <button className='btn-2 btn-pink btn-mid'>Text</button>
           <button className='btn-2 btn-pink btn-right'>Text</button>
@@ -81,11 +83,17 @@ const EventDetails = ({eventID}) => {
             <ModalEventSchedule closeModal={CloseModal} id={eventId} eventName={eventName} />
           </div>
         )}
+        {openModal === "terms" && (
+          <div className="modal-terms"> 
+            <ModalTerms closeModal={CloseModal} id={eventId} eventName={eventName} />
+          </div>
+        )}
       </section>
 
 
       <section className='event-details-left'>
         <EventSchedule id={eventId} reloadData={reloadComps}/>
+        <TermsComp id={eventId} reloadData={reloadComps}/>
       </section>
       <section className='event-details-right'>
         <EventRules id={eventId} reloadData={reloadComps}/>

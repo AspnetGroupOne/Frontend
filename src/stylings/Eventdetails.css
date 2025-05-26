@@ -56,7 +56,6 @@
     display: none;
 }
 
-
 /* MODALS */
 .modals-details-wrapper{
     position: fixed;
@@ -69,12 +68,6 @@
     align-items: center;
     z-index: 1001;
 }
-
-
-
-
-
-
 
 /* SINGLE BUTTONS */
 .btn{
@@ -146,4 +139,5 @@
 .btn-2:hover{
     transform: scale(1.01);
 }
+
 
