@@ -9,6 +9,7 @@ const SignIn = () => {
   });
 
   const [status, setStatus] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -16,18 +17,19 @@ const SignIn = () => {
       ...prev,
       [e.target.name]: e.target.value,
     }));
+    setStatus("");
   };
 
-  const allFieldsFilled = formData.email && formData.password;
-  const isFormValid = allFieldsFilled;
+  const isFormValid = formData.email && formData.password;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!isFormValid) {
-      setStatus("Please complete the form correctly.");
+      setStatus("Please fill in Email & Password.");
       return;
     }
 
+    setIsSubmitting(true);
     setStatus("Submitting...");
 
     try {
@@ -42,16 +44,23 @@ const SignIn = () => {
         }),
       });
 
-      const result = await response.json();
+      let result;
+      try {
+        result = await response.json();
+      } catch {
+        result = { message: "Unexpected server response." };
+      }
 
       if (response.ok) {
         setStatus("Login successful!");
         navigate("/dashboard");
       } else {
-        setStatus(result.message || "Login failed.");
+        setStatus(result.message || "Wrong email or password.");
       }
     } catch (error) {
       setStatus("Error connecting to server.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -61,38 +70,18 @@ const SignIn = () => {
         <h2>Sign In</h2>
 
         <label htmlFor="email">Email</label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          placeholder="Enter your email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
+        <input id="email" name="email" type="email" placeholder="Enter your email" value={formData.email} onChange={handleChange} required/>
 
         <label htmlFor="password">Password</label>
-        <input
-          id="password"
-          name="password"
-          type="password"
-          placeholder="Enter your password"
-          value={formData.password}
-          onChange={handleChange}
-          required
-        />
+        <input id="password" name="password" type="password" placeholder="Enter your password" value={formData.password}onChange={handleChange} required/>
 
-        <button type="submit" disabled={!isFormValid}>
-          Sign In
-        </button>
+        <button type="submit" disabled={!isFormValid || isSubmitting}> {isSubmitting ? "Signing In..." : "Sign In"} </button>
 
         <p className="status-message">{status}</p>
-
-        <p className="signin-link">Forgotten Password? <Link to="/denied">Reset Password</Link></p>
-        <p className="signin-link">Don't have an account yet? <Link to="/signup">Sign Up</Link></p>
+        <p className="signin-link">Forgotten password? <Link to="/reset">Reset it</Link> </p>
+        <p className="signin-link"> Don't have an account yet? <Link to="/signup">Sign up</Link> </p>
       </form>
     </div>
   );
 };
-
 export default SignIn;
