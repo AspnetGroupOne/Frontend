@@ -11,6 +11,7 @@ export default function AdminEvents() {
     const fetchEvents = async () => {
       try {
         const data = await getEvents();
+        console.log('Events från API:', data);
         setEvents(data);
       } catch (err) {
         console.error('Fel vid hämtning av events:', err);
@@ -36,9 +37,11 @@ export default function AdminEvents() {
         
         {events.map((event) => (
           <li key={event.id} className="border p-4 rounded-lg bg-purple-100">
-            <strong>{event.title}</strong><br />
+            <strong>{event.name}</strong><br />
             {event.date} — {event.location}<br />
             <em>{event.description}</em>
+            <br />
+            <span className="text-sm text-gray-600">Biljetter tillgängliga: {event.ticketsAvailable}</span>
           </li>
         ))}
       </ul>

@@ -1,6 +1,7 @@
-const API_URL = 'https://localhost:7180/api/events';
-
+const API_URL = 'https://eventbookingsystem20250526120605-azd2dcckf0guhzde.swedencentral-01.azurewebsites.net/api/events';
+/*const API_URL = 'https://localhost:7180/api/events';*/
 export const getEvents = async () => {
+  
   try {
     const res = await fetch(API_URL);
 
