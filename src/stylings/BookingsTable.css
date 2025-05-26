@@ -5,7 +5,6 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   }
 
-  /* Filter-knappar */
   .filters {
     display: flex;
     gap: 1rem;
@@ -28,7 +27,7 @@
     color: var(--grey-10);
   }
 
-  /* Sökfält och dropdowns */
+
   .search-and-filters {
     display: flex;
     justify-content: space-between;
@@ -68,7 +67,6 @@
   }
 
 
-  /* Själva tabellen */
   .bookings-table {
     width: 100%;
     border-collapse: collapse;
@@ -87,7 +85,6 @@
     font-size: 14px;
   }
 
-  /* Färger för taggar */
   .tag {
     background-color: var(--cool-grey-30);
     color: var(--secondary-100);
@@ -97,7 +94,6 @@
     display: inline-block;
   }
 
-  /* Status-badges */
   .status {
     padding: 0.3rem 0.8rem;
     border-radius: 50px;
@@ -157,7 +153,7 @@
 
 
 
-/* Action-knappar i tabellen (Edit + Delete) */
+
 .action-buttons button {
     padding: 6px 12px;
     margin: 0 4px;
@@ -225,12 +221,12 @@
     z-index: 1000;
   }
 
-  .modal-content {
+  .delete-modal-content {
     background: white;
     padding: 30px;
     border-radius: 10px;
     text-align: center;
-    width: 300px;
+    width: 400px;
   }
 
   .modal-buttons {

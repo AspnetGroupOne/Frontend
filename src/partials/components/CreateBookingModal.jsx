@@ -70,7 +70,7 @@ const CreateBookingModal = ({ event, onClose, onBookingCreated }) => {
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        <h2>Boka Event</h2>
+        <h2>Create Booking</h2>
 
         {message && (
           <div className={`success-message ${isError ? "error" : ""}`}>
@@ -81,7 +81,7 @@ const CreateBookingModal = ({ event, onClose, onBookingCreated }) => {
         <form onSubmit={handleSubmit}>
           <input
             type="text"
-            placeholder="Ditt namn"
+            placeholder="Your name"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
@@ -98,21 +98,21 @@ const CreateBookingModal = ({ event, onClose, onBookingCreated }) => {
 
           <input
             type="number"
-            placeholder="Pris"
+            placeholder="Price"
             value={price}
             onChange={(e) => setPrice(e.target.value)}
             required
           />
           <input
             type="number"
-            placeholder="Antal"
+            placeholder="Quantity"
             value={quantity}
             onChange={(e) => setQuantity(e.target.value)}
             required
           />
           <input
             type="text"
-            placeholder="Voucher-kod"
+            placeholder="Voucher code"
             value={voucher}
             onChange={(e) => setVoucher(e.target.value)}
           />
@@ -124,8 +124,8 @@ const CreateBookingModal = ({ event, onClose, onBookingCreated }) => {
           </select>
 
           <div className="modal-buttons">
-            <button type="submit" className="submit-button">Boka</button>
-            <button type="button" className="cancel-button" onClick={onClose}>Avbryt</button>
+            <button type="submit" className="submit-button">Book</button>
+            <button type="button" className="cancel-button" onClick={onClose}>Cancel</button>
           </div>
         </form>
       </div>
