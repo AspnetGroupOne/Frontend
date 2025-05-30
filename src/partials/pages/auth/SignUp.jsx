@@ -48,7 +48,8 @@ const SignUp = () => {
 
       if (response.ok) {
         setStatus("Signup successful!");
-      } else {
+      } 
+      else {
         setStatus(result.message || "Signup failed.");
       }
     } catch (error) {
@@ -62,51 +63,21 @@ const SignUp = () => {
         <h2>Sign Up</h2>
 
         <label htmlFor="email">Email</label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          placeholder="Enter email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
+        <input id="email" name="email" type="email" placeholder="Enter email" value={formData.email} onChange={handleChange} required/>
 
         <label htmlFor="password">Password</label>
-        <input
-          id="password"
-          name="password"
-          type="password"
-          placeholder="Enter password"
-          value={formData.password}
-          onChange={handleChange}
-          required
-        />
+        <input id="password" name="password" type="password" placeholder="Enter password" value={formData.password} onChange={handleChange} required/>
 
         <label htmlFor="confirmPassword">Confirm Password</label>
-        <input
-          id="confirmPassword"
-          name="confirmPassword"
-          type="password"
-          placeholder="Confirm Password"
-          value={formData.confirmPassword}
-          onChange={handleChange}
-          required
-        />
+        <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm Password" value={formData.confirmPassword} onChange={handleChange} required/>
 
-        <p className={`password-warning ${passwordsMatch ? "hidden" : ""}`}>
-          Passwords do not match.
-        </p>
+        <p className={`password-warning ${passwordsMatch ? "hidden" : ""}`}>Passwords do not match.</p>
 
-        <button type="submit" disabled={!isFormValid}>
-          Register
-        </button>
+        <button type="submit" disabled={!isFormValid}>Register</button>
 
         <p className="status-message">{status}</p>
 
-         <p className="signin-link">
-          Already have an account? <Link to="/signin">Sign In</Link>
-        </p>
+         <p className="signin-link">Already have an account? <Link to="/signin">Sign In</Link></p>
       </form>
     </div>
   );
