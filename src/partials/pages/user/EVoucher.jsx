@@ -2,6 +2,7 @@ import React from 'react'
 import '../../../stylings/Evoucher.css'
 import EventSchedule from '../../components/EventSchedule'
 import EventRules from './../../components/EventRules';
+import TermsComp from '../../components/TermsComp';
 
 
 
@@ -22,7 +23,7 @@ const EVoucher = ({eventId}) => {
                         <EventSchedule id={eventId} />
                     </div>
                     <div className='evoucher-terms'>
-
+                        <TermsComp id={eventId} />
                     </div>
                 </div>
 
