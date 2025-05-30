@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import EventRuleItem from './EventRuleItem'
 import '../../stylings/RulesComp.css'
+import { EVENT_RULES_SERVICE } from '../../utils/serviceConfig';
 
 
 const EventRules = ({ id, reloadData }) => {
@@ -10,7 +11,13 @@ const EventRules = ({ id, reloadData }) => {
         //Kept getting 24 items instead of 12, this fixed that.
         const arrayOfItems = []
         try{
-            const res = await fetch(`https://eventrulesservice-emdjc6bdg5echpf4.swedencentral-01.azurewebsites.net/api/EventRules//${id}`);
+            const res = await fetch(`${EVENT_RULES_SERVICE.URL}/api/EventRules/${id}`,
+        {
+          headers: {
+            'X-API-KEY': EVENT_RULES_SERVICE.API_KEY,
+            'Content-Type': 'application/json'
+          }
+        });
             const data = await res.json();
             if (!data.success)
                 console.log("No rules found.")

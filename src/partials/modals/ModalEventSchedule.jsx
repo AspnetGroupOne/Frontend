@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "../../stylings/ScheduleModal.css";
+import { EVENT_SCHEDULE_SERVICE } from '../../utils/serviceConfig';
 
 
 const ModalEventSchedule = ({ eventName, id, closeModal }) => {
@@ -18,7 +19,13 @@ const ModalEventSchedule = ({ eventName, id, closeModal }) => {
     //Fetching and if the response yields data then load it and set the mode to editing instead of adding.
     const getData = async () => {
         try {
-            const res = await fetch(`https://eventscheduleservice-dfa6gxfrg2cwe3ca.swedencentral-01.azurewebsites.net/api/Schedules/${id}`);
+            const res = await fetch(`${EVENT_SCHEDULE_SERVICE.URL}/api/Schedules/${id}`,
+                {
+                    headers: {
+                        'X-API-KEY': EVENT_SCHEDULE_SERVICE.API_KEY,
+                        'Content-Type': 'application/json'
+                    }
+                });
             const data = await res.json();
             if (!data.success || !data.content){
                 setIsEdit(false)
@@ -57,9 +64,10 @@ const ModalEventSchedule = ({ eventName, id, closeModal }) => {
                     ceremonyEnd: ceremonyEnd,
                     concertStart: concertStart
                 }
-                const res = await fetch('https://eventscheduleservice-dfa6gxfrg2cwe3ca.swedencentral-01.azurewebsites.net/api/Schedules/', {
+                const res = await fetch(`${EVENT_SCHEDULE_SERVICE.URL}/api/Schedules/`, {
                     method: 'POST',
                     headers: {
+                        'X-API-KEY': EVENT_SCHEDULE_SERVICE.API_KEY,
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify(formData)
@@ -83,9 +91,10 @@ const ModalEventSchedule = ({ eventName, id, closeModal }) => {
                     ceremonyEnd: ceremonyEnd,
                     concertStart: concertStart
                 }
-                const res = await fetch('https://eventscheduleservice-dfa6gxfrg2cwe3ca.swedencentral-01.azurewebsites.net/api/Schedules/', {
+                const res = await fetch(`${EVENT_SCHEDULE_SERVICE.URL}/api/Schedules/`, {
                     method: 'PUT',
                     headers: {
+                        'X-API-KEY': EVENT_SCHEDULE_SERVICE.API_KEY,
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify(formData)

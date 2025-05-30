@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../../stylings/ScheduleComp.css'
+import { EVENT_SCHEDULE_SERVICE } from '../../utils/serviceConfig';
 
 const EventSchedule = ({ id, reloadData }) => {
     const [data, setData] = useState([]);
@@ -15,7 +16,13 @@ const EventSchedule = ({ id, reloadData }) => {
     //Fetches the data and sets it.
     const getData = async () => {
         try{
-            const res = await fetch(`https://eventscheduleservice-dfa6gxfrg2cwe3ca.swedencentral-01.azurewebsites.net/api/Schedules/${id}`);
+            const res = await fetch(`${EVENT_SCHEDULE_SERVICE.URL}/api/Schedules/${id}`,
+                {
+                    headers: {
+                    'X-API-KEY': EVENT_SCHEDULE_SERVICE.API_KEY,
+                    'Content-Type': 'application/json'
+                    }
+                });
             const data = await res.json();
             if (!data.success)
                 console.error("No schedule found.")
