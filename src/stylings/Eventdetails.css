@@ -7,7 +7,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
     width: 1181px;
-    height: 100%;
+    height: auto;
     padding: 24px;
     border-radius: 14px;
 }
