@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "../../stylings/Terms.css";
+import { EVENT_TERMS_SERVICE } from '../../utils/serviceConfig';
 
 // This modal is edited with the help of chatgpt.
 // Shows a form which has textareas for each section in formData.
@@ -19,7 +20,13 @@ const ModalTerms = ({ id, closeModal }) => {
     
     const getData = async () => {
     try {
-        const res = await fetch(`https://eventtermsservice-d8hghqfbekhhbha8.swedencentral-01.azurewebsites.net/api/Terms/${id}`);
+        const res = await fetch(`${EVENT_TERMS_SERVICE.URL}/api/Terms/${id}`,
+            {
+                headers: {
+                'X-API-KEY': EVENT_TERMS_SERVICE.API_KEY,
+                'Content-Type': 'application/json'
+                }
+            });
         const data = await res.json();
 
         if (!data.success || !data.content) {
@@ -53,13 +60,12 @@ const ModalTerms = ({ id, closeModal }) => {
         };
 
         try {
-            const url = 'https://eventtermsservice-d8hghqfbekhhbha8.swedencentral-01.azurewebsites.net/api/Terms/';
             // Depending on if isEdit is true or not, it will change the method. 
             const method = isEdit ? 'PUT' : 'POST';
-
-            const res = await fetch(url, {
+            const res = await fetch(`${EVENT_TERMS_SERVICE.URL}/api/Terms/`, {
                 method,
                 headers: {
+                    'X-API-KEY': EVENT_TERMS_SERVICE.API_KEY,
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(submitPayload)

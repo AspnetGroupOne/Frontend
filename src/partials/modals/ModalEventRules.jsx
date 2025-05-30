@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../../stylings/RulesModal.css'
+import { EVENT_RULES_SERVICE } from '../../utils/serviceConfig';
 
 const ModalEventRules = ({ id, closeModal }) => {
   const [isEdit, setIsEdit] = useState(false)
@@ -23,7 +24,13 @@ const ModalEventRules = ({ id, closeModal }) => {
 
   const getData = async () => {
     try {
-      const res = await fetch(`https://eventrulesservice-emdjc6bdg5echpf4.swedencentral-01.azurewebsites.net/api/EventRules/${id}`);
+      const res = await fetch(`${EVENT_RULES_SERVICE.URL}/api/EventRules/${id}`,
+        {
+          headers: {
+            'X-API-KEY': EVENT_RULES_SERVICE.API_KEY,
+            'Content-Type': 'application/json'
+          }
+        });
       const data = await res.json();
       if (!data.success || !data.content){
         setIsEdit(false)
@@ -51,9 +58,10 @@ const ModalEventRules = ({ id, closeModal }) => {
           eventId: id,
           ...rules
         }
-        const res = await fetch('https://eventrulesservice-emdjc6bdg5echpf4.swedencentral-01.azurewebsites.net/api/EventRules/', {
+        const res = await fetch(`${EVENT_RULES_SERVICE.URL}/api/EventRules`, {
           method: 'POST',
           headers: {
+            'X-API-KEY': EVENT_RULES_SERVICE.API_KEY,
             'Content-Type': 'application/json'
           },
           body: JSON.stringify(formData)
@@ -73,9 +81,10 @@ const ModalEventRules = ({ id, closeModal }) => {
             eventId: id,
             ...rules
           }
-          const res = await fetch('https://eventrulesservice-emdjc6bdg5echpf4.swedencentral-01.azurewebsites.net/api/EventRules/', {
+          const res = await fetch(`${EVENT_RULES_SERVICE.URL}/api/EventRules`, {
             method: 'PUT',
               headers: {
+                'X-API-KEY': EVENT_RULES_SERVICE.API_KEY,
                 'Content-Type': 'application/json'
               },
               body: JSON.stringify(formData)
