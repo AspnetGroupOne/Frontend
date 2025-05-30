@@ -30,7 +30,7 @@ const SignIn = () => {
     }
 
     setIsSubmitting(true);
-    setStatus("Submitting...");
+    // setStatus("Submitting...");
 
     try {
       const response = await fetch("https://ventixeauthserviceprovider-e6fshpfqfpemcgdz.swedencentral-01.azurewebsites.net/api/auth/signin", {
@@ -47,7 +47,8 @@ const SignIn = () => {
       let result;
       try {
         result = await response.json();
-      } catch {
+      } 
+      catch {
         result = { message: "Unexpected server response." };
       }
 
