@@ -7,7 +7,14 @@
       "/robots.txt",
       "/manifest.webmanifest",
       "/apple-touch-icon.png",
-      "/vite.svg"
+      "/vite.svg",
+      "/images/*",
+      "/images/error_images/*",
+      "/images/event_card_images/*",
+      "/images/paid_status_icons/*",
+      "/images/rules-icons/*",
+      "/images/sidebar-images/*",
+      "/images/SocialMedia-icons/*"
     ]
   }
 }
