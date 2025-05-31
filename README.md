@@ -103,6 +103,8 @@ The location of where to put the file can differ on whether you initialized your
 
 ***Source:*** https://learn.microsoft.com/en-us/azure/static-web-apps/configuration
 
+***Chatgpt:*** Was shown our folder structure and helped with creating our config files content. 
+
 ### The second issue:
 
 The other issue is after having deployed the static web app. 
