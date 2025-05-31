@@ -217,7 +217,3 @@ const CalendarDaysCard = () => {
 }
 export default CalendarDaysCard
 ```
-
-# Tech:
-
-The frontend is built with react. The backend is made up of microservice APIs that we are hosting on azure. 
