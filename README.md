@@ -123,6 +123,40 @@ output_location: "dist" # Built app content directory - optional
 
 When having just deployed the web app, it says "build" and it simply needs to be changed to "dist" and your static web app should soon be up and running. Again, this is because we used vite. If you're using create-react-app then the word "build" might be the correct word. 
 
+## Safekeeping APIs with a .env file: 
+
+The use of a .env file was implemented near the end of the assignment for handling some API-urls and API-keys. It was added to the gitignore to keep it from ending up on GitHub.
+
+```env
+# Event Terms Service
+VITE_EVENT_TERMS_SERVICE_URL=https://exampleUrl.azurewebsites.net
+VITE_EVENT_TERMS_SERVICE_API_KEY=exampleKey-APINYCKEL
+```
+
+And a serviceConfig.jsx file was created, in the utils folder, for easy exporting of the urls and keys.
+
+```jsx
+export const EVENT_TERMS_SERVICE = {
+  URL: import.meta.env.VITE_EVENT_TERMS_SERVICE_URL,
+  API_KEY: import.meta.env.VITE_EVENT_TERMS_SERVICE_API_KEY,
+};
+```
+
+And then importing and using the url and API-key.
+
+```jsx
+import { EVENT_TERMS_SERVICE } from '../../utils/serviceConfig';
+
+const res = await fetch(
+  `${EVENT_TERMS_SERVICE.URL}/api/Terms/${id}`,
+    {
+      headers: {
+        'X-API-KEY': EVENT_TERMS_SERVICE.API_KEY,
+        'Content-Type': 'application/json'
+      }
+    }
+  );
+```
 
 ## Components: 
 
