@@ -20,6 +20,8 @@ const AdminEvents = lazy(() => import('./../partials/pages/admin/AdminEvents'))
 
 const PublicEvents = lazy(() => import('./../partials/pages/user/PublicEvents'));
 
+const AdminInvoices = lazy(() => import('./../partials/pages/admin/AdminInvoices'))
+
 export const routes = [
   {
     children: [
@@ -53,7 +55,8 @@ export const routes = [
       { path: '/admin/dashboard', element: <AdminDashboard /> },
       { path: '/admin/bookings', element: <AdminBookings /> },
       { path: '/admin/events', element: <AdminEvents /> },
-      { path: '/admin/eventDetails', element: <AdminEventDetails /> }
+      { path: '/admin/eventDetails', element: <AdminEventDetails /> },
+      { path: '/admin/invoices', element: <AdminInvoices /> }
     ]
   },
   {
